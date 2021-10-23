@@ -16,17 +16,17 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install pylint
-     - name: Lint with pylint
-       run: |
+    - name: Lint with pylint
+      run: |
         python lint_test.py
-     - name: Build container
-       run: |
+    - name: Build container
+      run: |
          echo "Building a container image..."
          sleep 30
-      - name: Deploy cluster
-        run: | 
+    - name: Deploy cluster
+      run: | 
           echo "Deploying to cluster..."
           sleep 30
           echo "Container has been deployed"
-      - run: echo "This job`s status is ${{ job.status }}."
+    - run: echo "This job`s status is ${{ job.status }}."
     
